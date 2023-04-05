@@ -1,0 +1,20 @@
+.appLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  //   font-size: 18px;
+  &:nth-child(1) {
+    margin-right: 25px;
+  }
+  &:hover {
+    // font-size: 20px;
+    color: var(--inverted-primary-color);
+    // text-shadow: 0px 0px 8px rgb(24, 212, 218);
+    //   0px 0px 20px var(--secondary-color);
+  }
+}
+.primary {
+  color: var(--primary-color);
+}
+.secondary {
+  color: var(--inverted-secondary-color);
+}
