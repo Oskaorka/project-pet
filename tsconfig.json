@@ -8,16 +8,20 @@
         "allowJs": true,
         "moduleResolution": "node",
         "baseUrl": ".",
+        // "strict": true,
         "paths": {
             "*": ["./src/*"]
         },
         "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
     },
-    // "files.eol": "\n",
+    // "include": ["./config/jest/jest-setup.ts", "./src/**/*"],
     "ts-node": {
         "compilerOptions": {
             "module": "CommonJS"
         }
-    }
+    },
+    "include": ["./config/jest/setupTests.ts", "./src/**/*"],
+    // "include": ["./config/jest/setupTests.ts"],
+    "types": ["node", "jest", "@testing-library/jest-dom"],
 }

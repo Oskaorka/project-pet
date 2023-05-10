@@ -2,6 +2,7 @@
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
  */
+import path from 'path';
 
 export default {
     // All imported modules in your tests should be mocked automatically
@@ -20,6 +21,7 @@ export default {
     coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
     // An array of directory names to be searched recursively up from the requiring module's location
     moduleDirectories: ['node_modules'],
+    modulePaths: ['<rootDir>src'],
     // An array of file extensions your modules use
     moduleFileExtensions: [
         'js',
@@ -31,14 +33,14 @@ export default {
         'json',
         'node',
     ],
-    // The root directory that Jest should scan for tests and modules within
-    rootDir: '../../',
     // The glob patterns Jest uses to detect test files
     testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
+    // The root directory that Jest should scan for tests and modules within
+    rootDir: '../../',
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
-
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     // An array of glob patterns indicating a set of files for which coverage information should be collected
     // collectCoverageFrom: undefined,
 
@@ -86,7 +88,10 @@ export default {
     // maxWorkers: "50%",
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-    // moduleNameMapper: {},
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
 
     // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
     // modulePathIgnorePatterns: [],
