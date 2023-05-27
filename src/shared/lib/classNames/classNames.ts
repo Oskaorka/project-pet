@@ -9,12 +9,7 @@ export function classNames(
         cls,
         ...additional.filter(Boolean),
         ...Object.entries(mods)
-            .filter(([className, value]) => Boolean(value))
+            .filter(([, value]) => Boolean(value))
             .map(([className]) => className),
     ].join(' ');
 }
-// ...Object.keys(mods).filter(key => mods[key]).join(" ");
-
-// classNames("remove-btn", { hovered: false, seletable: true, red: false }, [
-//   "pdg",
-// ]);
