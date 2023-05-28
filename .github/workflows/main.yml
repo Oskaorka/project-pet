@@ -10,7 +10,7 @@ jobs:
   runs-on: windows-latest
   strategy:
     matrix:
-      noe-version: [18.x]
+      noe-version: [17.x]
 
 
   steps:
