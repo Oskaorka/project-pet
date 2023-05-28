@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   pull_requset:
-    branches: [main]
+    branches: [master]
 jobs:
  pipline:
   runs-on: windows-latest
