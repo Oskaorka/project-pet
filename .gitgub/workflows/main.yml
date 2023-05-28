@@ -1,17 +1,16 @@
-name: Linting, testing, bulding
+name: linting, testing, bulding
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
-    branches: 
-      -main
+    branches: [main]
   pull_requset:
     branches: [main]
 jobs:
  pipline:
-  runs-on: windows-latest
+  runs-on: ubuntu-latest
   strategy:
     matrix:
-      noe-version: [18.x]
+      noe-version: [17.x]
 
 
   steps:
@@ -34,3 +33,4 @@ jobs:
       run: npm run storybook:build
     - name: screenshot testing
       run: npm run test:ui:ci
+      
