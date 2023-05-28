@@ -7,10 +7,10 @@ on:
   #   branches: [main]
 jobs:
  pipline:
-  runs-on: windows-latest
+  runs-on: windows-2019
   strategy:
     matrix:
-      noe-version: [18.x]
+      noe-version: [16.x]
 
   steps:
     - uses: actions/checkout@v2
