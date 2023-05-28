@@ -13,9 +13,9 @@ on:
 #     matrix:
 #       noe-version: [17.x]
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
