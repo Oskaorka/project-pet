@@ -1,17 +1,27 @@
 name: linting, testing, bulding
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
+#   push:
+#     branches: [main]
+#     pull_requset: [pull_request_target]
+#   # pull_requset:
+#   #   branches: [main]
+# jobs:
+#  pipline:
+#   runs-on: windows-latest
+#   strategy:
+#     matrix:
+#       noe-version: [17.x]
   push:
-    branches: [main]
-    pull_requset: [pull_request_target]
-  # pull_requset:
-  #   branches: [main]
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 jobs:
- pipline:
-  runs-on: windows-latest
-  strategy:
-    matrix:
-      noe-version: [17.x]
+  pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 17.x ]
 
 
   steps:
