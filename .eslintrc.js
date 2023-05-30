@@ -23,7 +23,6 @@ module.exports = {
         'i18next',
     ],
     rules: {
-        'linebreak-style': ['error', 'windows'],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
@@ -47,7 +46,8 @@ module.exports = {
             {
                 markupOnly: true,
                 ignoreAttribute: ['data-testid', 'to'],
-            }],
+            },
+        ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
     },
     globals: {
