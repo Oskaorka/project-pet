@@ -10,7 +10,7 @@ on:
     runs-on: windows-latest
     strategy:
       matrix:
-        node-version: [17.x]
+        noe-version: [17.x]
     steps:
       - uses: actions/checkout@v2
       - name: Staring Node.js ${{ matrix.node-version }}
