@@ -18,27 +18,15 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
                 plugins: [
                     [
                         'i18next-extract',
-                        {
-                            locales: ['ru', 'en'],
-                            keyAsDefaultValue: true,
-                        },
+                        { locales: ['ru', 'en'], keyAsDefaultValue: true },
                     ],
                 ],
             },
         },
     };
 
-    const cssLoader = buildCssLoader(isDev);
-
-    // Если не используем тайпскрипт - нужен babel-loader
-    const typescriptLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-    };
-
-    const fileLoader = {
-        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    const fileloader = {
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
             {
                 loader: 'file-loader',
@@ -46,11 +34,13 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         ],
     };
 
-    return [
-        fileLoader,
-        svgLoader,
-        babelLoader,
-        typescriptLoader,
-        cssLoader,
-    ];
+    const cssLoader = buildCssLoader(isDev);
+
+    const typescriptLoader = {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+    };
+
+    return [fileloader, svgLoader, babelLoader, typescriptLoader, cssLoader];
 }

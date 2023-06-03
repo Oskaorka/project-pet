@@ -1,4 +1,4 @@
-.Sidebar {
+.sidebar {
     height: calc(100vh - var(--navbar-height));
     width: var(--sidebar-width);
     background: var(--inverted-bg-color);
@@ -11,11 +11,13 @@
 }
 
 .switchers {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
     bottom: 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    right: 20px;
 }
 
 .lang {

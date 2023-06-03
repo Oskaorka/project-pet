@@ -1,10 +1,11 @@
 import { render } from 'react-dom';
+import { ThemeProvider } from 'app/provider/ThemeProvider';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'app/providers/ThemeProvider';
+import { ErrorBoundary } from 'app/provider/ErrorBondary';
+// import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import App from './app/App';
 
-import './shared/config/i18n/i18n';
-import { ErrorBoundary } from './app/providers/ErrorBoundary';
+import 'shared/config/i18n/i18n';
 
 render(
     <BrowserRouter>

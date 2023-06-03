@@ -1,5 +1,14 @@
-.AppLink {
+.appLink {
     color: var(--primary-color);
+    text-decoration: none;
+
+    &:nth-child(1) {
+        margin-right: 25px;
+    }
+
+    &:hover {
+        color: var(--inverted-primary-color);
+    }
 }
 
 .primary {
@@ -7,9 +16,9 @@
 }
 
 .secondary {
-    color: var(--inverted-primary-color);
+    color: var(--inverted-secondary-color);
 }
 
 .red {
-    color: red;
+    color: tomato;
 }
