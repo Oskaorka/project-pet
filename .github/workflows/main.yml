@@ -3,15 +3,14 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
     branches: [main]
-  # pull_requset:
-  #   branches: [main]
+  pull_requset:
+    branches: [main]
 jobs:
  pipline:
   runs-on: windows-latest
   strategy:
     matrix:
-      noe-version: [16.x]
-
+      node-version: [16.x]
   steps:
     - uses: actions/checkout@v2
     - name: Staring Node.js ${{ matrix.node-version }}
