@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { BugButton } from '../../../app/provider/ErrorBondary';
+import { BugButton } from 'app/provider/ErrorBondary';
 
 const MainPage = () => {
     const { t } = useTranslation('main');
