@@ -1,13 +1,12 @@
 import { ButtonHTMLAttributes, FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-// import { classNames } from '../../lib/classNames/classNames';
 import cls from './button.module.scss';
 
 export enum ButtonTheme {
   CLEAR = 'clear',
   OUTLINE = 'outline',
   BACKGROUND = 'background',
-  BACKGROUND_INVERTED  = 'backgroundInverted'
+  BACKGROUND_INVERTED = 'backgroundInverted',
 }
 
 export enum ButtonSize {
@@ -40,12 +39,5 @@ export const Button: FC<ButtonProps> = (props) => {
         >
             {children}
         </button>
-    //     <button
-    //     type="button"
-    //     className={classNames(cls.Button, { [cls[theme]]: true }, [className])}
-    //     {...otherProps}
-    // >
-    //     {children}
-    // </button>
     );
 };
