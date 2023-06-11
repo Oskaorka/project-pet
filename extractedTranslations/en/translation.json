@@ -1,6 +1,11 @@
 {
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit": {
+    " Cumque quibusdam, quos labore maiores nam eum beatae accusantium assumenda praesentium mollitia ipsum repudiandae accusamus vel dolorum hic, temporibus nobis saepe qui?": " Cumque quibusdam, quos labore maiores nam eum beatae accusantium assumenda praesentium mollitia ipsum repudiandae accusamus vel dolorum hic, temporibus nobis saepe qui?",
+    "Cumque quibusdam, quos labore maiores nam eum beatae accusantium assumenda praesentium mollitia ipsum repudiandae accusamus vel dolorum hic, temporibus nobis saepe qui?": "Cumque quibusdam, quos labore maiores nam eum beatae accusantium assumenda praesentium mollitia ipsum repudiandae accusamus vel dolorum hic, temporibus nobis saepe qui?"
+  },
   "throw error": "throw error",
   "toggle": "toggle",
+  "Войти": "Войти",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
   "Обновить страницу": "Обновить страницу",
@@ -8,5 +13,6 @@
   "Что-то пошло не так": {
     "": ""
   },
-  "Язык": "Язык"
+  "Язык": "Язык",
+  "войти": "войти"
 }
