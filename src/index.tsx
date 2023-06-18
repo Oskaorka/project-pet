@@ -2,7 +2,7 @@ import { render } from 'react-dom';
 import { ThemeProvider } from 'app/provider/ThemeProvider';
 import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'app/provider/ErrorBondary';
-import { StoreProvider } from  'app/provider/StoreProvider'
+import { StoreProvider } from 'app/provider/StoreProvider';
 import App from './app/App';
 import 'app/styles/index.scss';
 

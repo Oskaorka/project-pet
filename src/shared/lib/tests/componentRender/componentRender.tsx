@@ -14,7 +14,7 @@ export interface componentRenderOptions {
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
     const {
         route = '/',
-        initialState
+        initialState,
     } = options;
     return render(
         <StoreProvider initialState={initialState}>
